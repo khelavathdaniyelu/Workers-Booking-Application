@@ -1,0 +1,1129 @@
+/* ===== App Wrapper Styles ===== */
+.App {
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(34, 197, 94, 0.6)), 
+    url('https://5.imimg.com/data5/GQ/KN/VK/ANDROID-26542132/fb-img-15023380738122985-jpg-1000x1000.jpg'); 
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  background-attachment: fixed;
+}
+
+/* ===== Logo Animation ===== */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.App-logo:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== App Header ===== */
+.App-header {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Links ===== */
+.App-link {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.App-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* ===== Booking Container ===== */
+.booking-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: #ffffff10;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.booking-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffeaa7;
+}
+
+/* ===== Form Fields ===== */
+.booking-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f3f3f399;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.booking-container input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffff99;
+}
+
+/* ===== Button ===== */
+.booking-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #34e89e, #0f3443);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Booking List ===== */
+.my-bookings {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.my-bookings h2 {
+  font-size: 1.6rem;
+  color: #ffeaa7;
+}
+
+.booking-list {
+  background-color: #ffffff33;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.no-bookings {
+  color: #dfe6e9; /* Light gray text */
+  font-style: italic;
+  font-size: 1.2rem; /* Slightly larger font */
+  text-align: center; /* Center the text */
+  padding: 15px;
+  background: linear-gradient(45deg, #2d3436, #576574); /* Gradient background for more depth */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.2); /* Adding more shadow for depth */
+  transition: transform 0.3s ease, opacity 0.3s ease, scroll-behavior 0.5s ease, background 0.3s ease; /* Smooth transition */
+  
+  /* Add scrolling effect */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hide the text overflow */
+  position: relative;
+  animation: scrollText 10s linear infinite; /* Animation to scroll text */
+  
+  /* Pulse animation for an attractive effect */
+  animation: scrollText 10s linear infinite, pulse 1.5s ease-in-out infinite; /* Add pulse to scrolling text */
+  width: 70%; /* Decrease width to make the box smaller */
+  max-width: 500px; /* Set a maximum width */
+  margin-left: auto; /* Center the box horizontally */
+  margin-right: auto;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+.no-bookings:hover {
+  transform: scale(0.7); /* Slight zoom effect on hover */
+  opacity: 0.8; /* Slightly fade when hovered */
+  background: linear-gradient(45deg, #e74c3c, #f39c12); /* Change background color on hover */
+}
+
+.no-bookings p {
+  margin: 0;
+  font-weight: bold; /* Make the text bold */
+  display: inline-block; /* Prevent text from breaking to the next line */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for text to make it pop */
+}
+
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #22c55e; /* Tailwind soft green */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #d1fae5; /* lighter green on hover */
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.7rem; /* 🔸 reduces the space between links */
+}
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White color for links */
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: 500; /* Medium weight for text */
+  position: relative; /* For positioning pseudo-elements */
+  padding: 5px 10px; /* Padding for better clickable area */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.user-profile .slide-panel {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background-color: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-profile:hover .slide-panel {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: auto;
+}
+
+
+.nav-links a::before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ff6347; /* Attractive color for the underline */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-links a:hover::before {
+  width: 100%; /* Underline expands on hover */
+}
+
+.nav-links a:hover {
+  color: #ff6347; /* Change text color on hover */
+  transform: translateY(-3px); /* Slightly lift the text for 3D effect */
+}
+
+.nav-links a:active {
+  transform: translateY(0); /* Reset on active click */
+}
+
+/* Dropdown Menu (hamburger) */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  align-items: flex-start;
+  gap: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #333;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu .nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu .nav-link:last-child {
+  border-bottom: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Left Sidebar Menu */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #1f2937; /* dark gray */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 1.5rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar-menu.open {
+  transform: translateX(0); /* Slide in from left */
+}
+
+.sidebar-menu .nav-link {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar-menu .nav-link:hover {
+  color: #22c55e; /* soft green */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 0.7rem;   /* Adjust the distance from the top */
+  right: 1.0rem; /* Distance from the right */
+  background: none;
+  border: none;
+  font-size: 1rem;  /* Increase the size */
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 0.5rem; /* Add some padding for better clickability */
+}
+
+.close-btn:hover {
+  color: #ff6b6b; /* Change color on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: add a hover effect */
+}
+/* Registration Container */
+.register-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title Styling */
+.register-container h2 {
+  font-size: 1.9rem; /* Increased font size for the title */
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Uppercase letters for a strong title */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Styling */
+.register-form input {
+  width: 100%;
+  padding: 11px;
+  margin: 12px 0;
+  border: 1.7px solid #ccc; /* Lighter border for input fields */
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f7f7f7; /* Light background for inputs */
+  color: #333; /* Dark text for good contrast */
+}
+
+/* Input Focus State */
+.register-form input:focus {
+  border-color: #ff6347; /* Highlight border on focus */
+  background-color: #fff; /* White background when focused */
+  box-shadow: 0 0 12px rgba(255, 99, 71, 0.2); /* Soft glow effect */
+}
+
+/* Placeholder Styling */
+.register-form input::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Error Message Styling */
+.error-message {
+  font-size: 1rem;
+  color: #ff6347; /* Tomato color for the text */
+  margin-top: 12px;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ff6347;
+  background-color: rgba(255, 99, 71, 0.1); /* Light tomato background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.5s ease-out; /* Adding animation */
+}
+
+.error-message svg {
+  margin-right: 8px; /* Space between the icon and the text */
+  width: 18px;
+  height: 18px;
+}
+
+/* Animation for error message sliding in */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Submit Button Styling */
+.submit-button {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Button Hover and Active States */
+.submit-button:hover {
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input-field:focus {
+  border-color: #ff6a00;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 106, 0, 0.2);
+}
+
+/* AddPainterForm.css */
+
+/* Container for the form */
+.add-painter-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading of the form */
+.add-painter-form h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Success message style */
+.success-message {
+  color: #28a745;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Error message style */
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Form container */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label styles */
+.form-label {
+  font-weight: bold;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Input field styles */
+.input-field {
+  width: 97%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Submit button styles */
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .add-painter-form {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
+.painter-card {
+  background: #ffffff22;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Submit button styles */
+.submit-button2 {
+  background-color: #f44336;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-button2:hover {
+  background-color: #45a04b;
+  transform: translateY(-2px);
+}
+.painter-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.painter-card {
+  background: linear-gradient(to bottom right, #fffffff0, #f9f9f904);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  list-style: none;
+}
+
+.painter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.painter-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.painter-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.painter-card p strong {
+  color: #222222;
+}
+
+/* Optional subtle icon animation on hover */
+.painter-card:hover p strong::after {
+  content: " ✨";
+  animation: shine 1s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.painter-card p {
+  font-size: 1rem;
+  margin: 12px 0; /* Adds spacing between each line */
+  color: #555;
+  text-transform: uppercase;
+
+}
+
+.expertise-label {
+  color: #007BFF; /* Bright blue or change to match your theme */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.painter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #ff4d4d;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.2); /* Slightly enlarges the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.delete-button:active {
+  transform: scale(1.1); /* Slightly shrink on click */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow when clicked */
+}
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(231, 77, 60, 0.912); /* Focus outline with red shadow */
+}
+
+.expertise-value {
+  color: #4234db; /* A nice blue, change to any color you like */
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+  flex-wrap:initial;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #34db55, 0 0 10px #db5834;
+  }
+  100% {
+    text-shadow: 0 0 10px #ad4444, 0 0 20px #44ad57;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Styling */
+.add-painter-form {
+  padding: 2rem;
+  border-radius: 20px;
+  background: #f0f4ff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease;
+  
+}
+.add-painter-form:hover{
+  transform: scale(1.03);
+  
+}
+.success-message,
+.error-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: popIn 0.3s ease;
+}
+
+.success-message {
+  background-color: #e0f8e9;
+  color: #0f8a3d;
+}
+
+.error-message {
+  background-color: #ffe0e0;
+  color: #c40000;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6a67ff;
+  box-shadow: 0 0 5px #6a67ff55;
+}
+
+.input-error {
+  border-color: #ff3e3e;
+  background-color: #ffe9e9;
+}
+
+.error-text {
+  color: #d40000;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.submit-button {
+  background-color: #6a67ff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: bounceIn 0.4s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #4b46d4;
+}
+
+.bounce {
+  animation: bounceIn 0.6s;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  animation: slideInOut 3s ease-in-out forwards;
+}
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/*user profile css code*/
+.user-profile {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.user-profile:hover {
+  color: #007bff;
+}
+
+.dropdown-menu {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+  border: 1px solid #eaeaea;
+}
+
+.dropdown-menu .nav-link {
+  color: #222;
+  text-decoration: none;
+  padding: 12px 18px;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 6px;
+}
+
+.dropdown-menu .nav-link:hover {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(79, 172, 254, 0.4);
+}
+
+
+/* Spinner */
+.spinner {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-top: 50px;
+}
+
+/* Profile Page */
+.profile-page {
+  padding: 30px;
+  max-width: 480px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.profile-page h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.profile-page p {
+  font-size: 18px;
+  color: #555;
+}
+
+.profile-page .user-info {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #333;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-page .input-container {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+}
+
+.profile-page input:focus {
+  border-color: #4caf50;
+  background: #fff;
+  outline: none;
+}
+
+.profile-page button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-page button:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page button:active {
+  background-color: #388e3c;
+}
+
+.profile-page .update-message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+.profile-page .user-info {
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #333;
+  padding: 12px;
+}
+
+.profile-page .user-info strong {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 20px;
+  }
+
+  .profile-page h1 {
+    font-size: 28px;
+  }
+
+  .profile-page p {
+    font-size: 16px;
+  }
+
+  .profile-page input {
+    padding: 10px;
+  }
+
+  .profile-page button {
+    padding: 12px;
+  }
+}
+
+/* Animation for Page Transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-page {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Profile Page - Update Username Section */
+.profile-page h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 8px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Input Field for Username Update */
+.profile-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+}
+
+.profile-page input:focus {
+  border-color: #4caf50;
+  background: #fff;
+  outline: none;
+}
+
+/* Update Button */
+.profile-page button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.profile-page button:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page button:active {
+  background-color: #388e3c;
+}

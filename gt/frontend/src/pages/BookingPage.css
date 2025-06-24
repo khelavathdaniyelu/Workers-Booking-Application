@@ -1,0 +1,304 @@
+/* BookingPage.css */
+
+/* General Styling */
+.booking-page {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 1.5rem 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Title Styling */
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1b9a47;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.title:hover {
+  transform: scale(1.03);
+}
+
+/* Error Message Styling */
+.error-message {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Booking Form Styling */
+.booking-form {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+.booking-form:hover {
+  transform: scale(1.03);
+}
+
+/* Form Label Styling */
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ff4081;
+}
+
+/* Input Field Styling */
+.input-field {
+  width: 95%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #6a1b9a;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.input-field:focus {
+  border-color: #ff4081;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.submit-button:hover {
+  background-color: #ab47bc;
+  transform: translateY(-2px);
+}
+
+/* Separator Styling */
+.separator {
+  border-bottom: 2px solid #6a1b9a;
+  margin: 2rem 0;
+}
+
+/* Booking List Container Styling */
+.booking-list-container {
+  margin-top: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.booking-list-container:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title Styling */
+.section-title {
+  font-size: 3.0rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #bbfca3, #ffd6d1);
+  background-size: 90% 90%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: gradientAnimation 6s ease-in-out infinite, titleBounce 2s ease-in-out infinite;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title Bounce Animation */
+@keyframes titleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Icon Styling */
+.icon {
+  margin-right: 8px;
+  font-size: 3rem;
+  color: #3498db;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Icon Image Styling */
+.icon-image {
+  width: 49px;
+  height: 49px;
+  margin-right: 10px;
+  vertical-align: middle;
+  animation: rotate3d 2s infinite;
+  transform-origin: center;
+}
+
+/* 3D Rotation Animation */
+@keyframes rotate3d {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* Booking List Layout */
+.booking-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Booking Item Styling */
+.booking-item {
+  background-color: #333333;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  flex: 1 1 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.booking-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Booking Item Title */
+.booking-item h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Booking Item Description */
+.booking-item p {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* Booking Item Info Styling */
+.booking-item .booking-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* Status Styling */
+.booking-item .status {
+  font-weight: bold;
+  color: #4caf50;
+  background-color: #e8f5e9;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* Booking Date and Title Styling */
+.booking-item-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.booking-item-date {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+/* Loading Text Styling */
+.loading-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-image: linear-gradient(45deg, #ff4081, #3f51b5, #9c27b0);
+  background-size: 300% 300%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradientAnimation 3s linear infinite, shimmerEffect 1.5s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(106, 27, 154, 0.8), 0 0 30px rgba(106, 27, 154, 0.6), 0 0 45px rgba(106, 27, 154, 0.4);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shimmer Effect */
+@keyframes shimmerEffect {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* No Bookings Styling */
+.no-bookings {
+  text-align: center;
+  color: #9e9e9e;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .booking-form {
+    padding: 1.5rem;
+  }
+}
