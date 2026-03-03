@@ -1,1 +1,1 @@
-# Workers-Booking-Application
+Developed a full-stack web platform using Java, Spring Boot, React.js, and MySQL for booking skilled workers.Built dynamic dashboards for workers and customers, managing builds with Maven for deployment efficiency.
